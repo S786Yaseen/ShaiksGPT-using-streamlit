@@ -202,7 +202,7 @@ if user_input := st.chat_input("Message ShaiksGPT..."):
                 serp_api_url = "https://serpapi.com/search.json"
                 params = {
                     "q": user_input,
-                    "api_key": "740311d2537c68d3d76de33de8c68a5e0a64108176c0c5742107c17bfaf697a3"
+                    "api_key": st.secrets["SERPAPI_KEY"]
                 }
                 search_response = requests.get(serp_api_url, params=params)
                 
